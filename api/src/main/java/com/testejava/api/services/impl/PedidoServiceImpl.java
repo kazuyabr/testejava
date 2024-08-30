@@ -20,6 +20,10 @@ public class PedidoServiceImpl implements PedidosService {
 
     @Override
     public void salvarPedido(Pedidos pedido) {
+        if (pedidoRepository.existsByNumeroControle(pedido.getNumeroControle())) {
+            throw new RuntimeException("Número de controle já cadastrado");
+        }
+
         Long codigoCliente = pedido.getCodigoCliente();
         if (codigoCliente == null || codigoCliente < 1 || codigoCliente > 10) {
             throw new RuntimeException("Código do cliente inválido");
@@ -28,10 +32,6 @@ public class PedidoServiceImpl implements PedidosService {
         long count = pedidoRepository.count();
         if (count >= 10) {
             throw new RuntimeException("Limite de 10 pedidos atingido");
-        }
-
-        if (pedidoRepository.existsByNumeroControle(pedido.getNumeroControle())) {
-            throw new RuntimeException("Número de controle já cadastrado");
         }
 
         if (pedido.getDataCadastro() == null) {

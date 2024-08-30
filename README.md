@@ -18,5 +18,4 @@ Embora o iniciar o projeto ja rode os testes por padrão ele ignora os warnings 
 Para rodar os testes basta rodar ``` mvn test``` e então ele rodara os testes.
 
 # Observações
-1 - Lembre-se de rodar os comandos sempre na raiz do projeto onde temos o arquivos de dependencias pom.xml pois durante o build ou o test ele ira ler este arquivo afim de baixar dependencias necessarias para o projeto.
-2 - Pode ser que os testes não rodem pois tenho um certo problema com injeção de dependencias e desacoplamento neste projeto, estou aos poucos resolvendo isso para melhorar profissionalmente aplicando TDD.
+Lembrem-se de rodar os comandos sempre na raiz do projeto onde temos o arquivos de dependencias pom.xml pois durante o build ou o test ele ira ler este arquivo afim de baixar dependencias necessarias para o projeto.
