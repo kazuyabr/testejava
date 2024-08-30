@@ -8,7 +8,7 @@ Foi utilizado como framework para essa api o Spring Boot + Lombok para diminuir 
 MySQL
 
 # Testes Unitários
-JUnit e Mockito
+JUnit, Mockito e Jacoco
 
 # Como rodar
 ## Inicializando o projeto
@@ -18,4 +18,5 @@ Embora o iniciar o projeto ja rode os testes por padrão ele ignora os warnings 
 Para rodar os testes basta rodar ``` mvn test``` e então ele rodara os testes.
 
 # Observações
-Lembrem-se de rodar os comandos sempre na raiz do projeto onde temos o arquivos de dependencias pom.xml pois durante o build ou o test ele ira ler este arquivo afim de baixar dependencias necessarias para o projeto.
+1 - Lembrem-se de rodar os comandos sempre na raiz do projeto onde temos o arquivos de dependencias pom.xml pois durante o build ou o test ele ira ler este arquivo afim de baixar dependencias necessarias para o projeto.
+2 - Para visualizar o relatório de cobertura de testes do Jacoco basta acessar /target/jacoco/index.html da aplicação e abrir no browse. (Live Server ou Live Preview que são extensões VSCode podem facilitar a visualização)
